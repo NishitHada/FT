@@ -16,3 +16,8 @@ class ActivityViewSet(viewsets.ModelViewSet):
     queryset = ActivityPeriod.objects.all()
     serializer_class = ActivitySerializer
 
+
+class AnsViewSet(viewsets.ModelViewSet):
+    queryset = ActivityPeriod.objects.select_related('user').all()
+    serializer_class = AnsSerializer
+
