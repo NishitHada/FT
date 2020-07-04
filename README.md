@@ -1,4 +1,4 @@
-# Full Threottle Assignment
+# Full Throttle Assignment
 
 FT is the name of our project, myapp has the api for the described functionality.
 
