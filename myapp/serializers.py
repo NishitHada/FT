@@ -11,15 +11,11 @@ class ActivitySerializer(serializers.ModelSerializer):
 
 
 class UserSerializer(serializers.ModelSerializer):
-    # activity_periods = serializers.StringRelatedField(many=True)
     activity_periods = ActivitySerializer(many=True)
 
     class Meta:
         model = User
         fields = ('id', 'real_name', 'tz', 'activity_periods')
-
-
-
 
 
 class AnsSerializer(UserSerializer):

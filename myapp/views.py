@@ -28,9 +28,3 @@ class AnsViewSet(View):
             serializer = UserSerializer(users, many=True)
             return success_response("members", serializer.data)
         return failure_response("No users found in DB, run populate_db command")
-
-
-# class AnsViewSet(viewsets.ModelViewSet):
-#     queryset = ActivityPeriod.objects.prefetch_related('user').all()
-#     serializer_class = AnsSerializer
-
