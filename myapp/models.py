@@ -13,6 +13,10 @@ class User(models.Model):
 
 
 class ActivityPeriod(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="activity_periods")
     start_time = models.DateTimeField(default='2020-02-10 11:34:35', blank=True, null=True)
     end_time = models.DateTimeField(default='2020-02-10 11:34:35', blank=True, null=True)
+
+    # def __str__(self):
+    #     return self.id
+
