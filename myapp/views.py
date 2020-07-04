@@ -1,5 +1,5 @@
 from django.db.models import *
-from rest_framework import viewsets
+# from rest_framework import viewsets
 from .serializers import *
 from .models import User
 from django.shortcuts import render
@@ -9,15 +9,15 @@ from django.views import View
 # Create your views here.
 
 
-class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-
-
-class ActivityViewSet(viewsets.ModelViewSet):
-    for id in User.objects.values('id').all():
-        queryset = ActivityPeriod.objects.filter( user=User.objects.get(id=id['id']) )
-        serializer_class = ActivitySerializer(queryset, many=True)
+# class UserViewSet(viewsets.ModelViewSet):
+#     queryset = User.objects.all()
+#     serializer_class = UserSerializer
+#
+#
+# class ActivityViewSet(viewsets.ModelViewSet):
+#     for id in User.objects.values('id').all():
+#         queryset = ActivityPeriod.objects.filter( user=User.objects.get(id=id['id']) )
+#         serializer_class = ActivitySerializer(queryset, many=True)
 
 
 class AnsViewSet(View):
